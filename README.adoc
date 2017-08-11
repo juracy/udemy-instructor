@@ -1,0 +1,17 @@
+Udemy Revenue Summary
+=====================
+
+== Settings
+
+[source, bash]
+----
+export UDEMY_TOKEN="TOKEN"
+export UDEMY_STATEMENT="999999"
+----
+
+== Running
+
+[source, bash]
+----
+./udemy.py
+----
