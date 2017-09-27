@@ -4,7 +4,7 @@ import sys
 import os
 import requests
 
-PAGE_SIZE = 200
+PAGE_SIZE = os.getenv('UDEMY_FETCH', 500)
 
 
 class Aggregate(object):
