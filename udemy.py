@@ -18,7 +18,9 @@ class Aggregate(object):
         return self
 
     def __str__(self):
-        return '%2d students $%6.2f' % (self.students, self.revenues)
+        return '%2d students - total: $%6.2f - average: $%6.2f' % (
+            self.students, self.revenues,
+            self.revenues / self.students)
 
 
 class Udemy(object):
@@ -68,7 +70,7 @@ class Udemy(object):
         sums = sum(t.revenues for t in self.totals.values())
         students = sum(t.students for t in self.totals.values())
         print()
-        print('total: {} students ${:7.2f}'.format(students, sums))
+        print('total: {} students ${:.2f}'.format(students, sums))
         print('refunds:', '%6.2f' % self.totals_refunds)
         print('revenues:', '%6.2f' % (sums - self.totals_refunds))
 
