@@ -74,6 +74,12 @@ class Udemy(object):
         print('refunds:', '%6.2f' % self.totals_refunds)
         print('revenues:', '%6.2f' % (sums - self.totals_refunds))
 
+        day = datetime.now().day
+        print('average: {:.1f} students/day ${:.2f}/day ${:.2f}/student'.format(
+                students / day, (sums - self.totals_refunds) / day,
+                (sums - self.totals_refunds) / students))
+        print('month preview: ${:.2f}'.format((sums - self.totals_refunds) / day * 31))
+
 
 if __name__ == '__main__':
     try:
